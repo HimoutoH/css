@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型内容区</title>
+    <style>
+        /* 
+            一个盒子最内部就叫做内容区
+                一个元素的子元素 文本 图片之类的都位于内容区
+                内容区就是元素放"东西的"
+                内容区的大小决定了盒子放多少东西 
+
+            默认情况下 width 和 height 就是用来设置盒子内容区的大小
+
+            可见框
+                - 元素的可见框指的是元素可以被直接看到的区域
+        */
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            border: 100px yellowgreen dotted;
+            background-color: #bfa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+</body>
+
+</html>

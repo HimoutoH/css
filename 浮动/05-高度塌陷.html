@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高度塌陷</title>
+    <style>
+        .box1 {
+            border: 10px red solid;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            float: left;
+
+            /* 
+                在文档流中父元素的高度默认被内容撑开的
+                    也就是说父元素会根据子元素的大小自动调整高度
+                    如果子元素浮动脱离文档流 将无法撑起父元素的高度
+                    导致父元素的高度塌陷，高度塌陷后后边的元素会自动上移导致布局会发生变化
+
+                在一些场景中 父元素高度是固定的，可以通过将父元素的高度
+                    写死来避免高度塌陷
+                在另一些场景中 希望父元素的高度被内容撑开
+                    不能将内容写死 必须要处理高度塌陷
+            */
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2">
+
+        </div>
+    </div>
+    <div class="box3"></div>
+</body>
+
+</html>

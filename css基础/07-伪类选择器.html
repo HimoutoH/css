@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        /*
+            我们希望将访问过得超链接设置为橙色
+         */
+        
+
+        /* 
+            伪类
+                - 伪类用来表示元素的特殊状态
+                - 比如
+                    一个链接是否被访问
+                    一个按钮是否被点击
+                    鼠标是否移入某个元素
+                    ...
+                注意
+                    伪类选择器都是以:开头的 
+
+                - 例子 
+                    :link  只有超链接可以用
+                        没有访问过得超链接
+                    :visited 只有超链接可以用
+                        访问过得超链接
+                    :hover  不仅可以用于超链接 还可以用于别的
+                        鼠标移入
+                    :active 不仅可以用于超链接 还可以用于别的
+                        表示鼠标点击的元素 
+         */
+        /* 是否访问 */
+        button:hover{
+            color: red;
+        }
+        a:visited{
+            color: orange;
+        }
+        /* 没访问过的超链接 */
+        a:link{
+            color: red;
+        }
+        a:hover{
+            color: aqua;
+        }
+        /* button:visited{
+            color: blue;
+
+            失败这样不可以
+        } */
+        a:active{
+            color: yellowgreen;
+        }
+        button:active{
+            color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <a title="百度" href="https://www.baidu.com">百度</a>
+    <br><br>
+    <a href="https://www.baidu123.com">不知道什么网站</a>
+    <br><br>
+    <button>点击</button>
+</body>
+
+</html>

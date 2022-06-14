@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFC</title>
+    <style>
+        .box1 {
+            border: 10px red solid;
+            /* float: left; */
+            /* overflow: auto; */
+
+            /* 将元素的特点和根元素一致 */
+            display: flow-root;
+
+            /* 
+                可以通过开启BFC结局高度塌陷
+                    BFC：快级格式化环境
+                        -BFC 元素的一个隐函数型
+                            开启BFC后相当于元素成为了一个独立的布局区域
+                        - 元素开启BFC后悔开启如下特点
+                            1. 开启BFC后 元素不会被浮动元素所覆盖
+                            2. 开启BFC后 元素的垂直外边距不会传递给父元素
+                            3. 开启BFC后 元素可以包含浮动的子元素 **** 
+                        - 如何开启BFC
+                            - BCF是隐函数型无法直接开启 但是可以通过其他属性间接开启
+                                间接开启通常会带来副作用
+                                - 方式
+                                    1. 设置浮动 （会使元素脱离文档流）
+                                    2. 设置绝对定位 （会使元素脱离文档流）
+                                    3. 可以将overflow设置为非visible的值
+                                        通常我们会使用overflow：hidden解决高度塌陷问题
+                                    
+                                    4. display: flow-root;  (无副作用 但是不兼容ie)
+                                        但是兼容性不太好  ie 
+
+            */
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            float: left;
+        }
+
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+            /* float: left; */
+            /* 因为他的子元素有外边距导致父元素也有外边距 */
+            overflow: hidden;
+        }
+
+        .box4 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* 开启BFC */
+            /* overflow: hidden; */
+        }
+
+        .box5 {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="box1">
+        <div class="box2"></div>
+    </div> -->
+    <div class="box3">
+        <div class="box5"></div>
+    </div>
+    <div class="box4"></div>
+</body>
+
+</html>

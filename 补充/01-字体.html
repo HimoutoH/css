@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体</title>
+    <style>
+        .box1{
+            /* 
+                font-size 用来指定字体大小
+                    12px 就是文字最小了     1-12大小都是12   写0文字就消失了
+                font-weight 字重  粗细 
+                    可取值
+                        normal 正常粗细 与400等值
+                        bold 加粗与700等值
+
+                        lighter 比父元素继承来的值更细 (处在字体可行的粗细值范围内)
+                        bolder 比从父元素继承来的值更粗(处在字体可行的粗细值范围内)
+                        number 一个介于1和1000之间的number类型值 更大的数值代表字体重量粗于更小的值 一些常用的数值对应于
+                            通用的字体重量名称 
+                        - 可以传递100 200 300 - 1000十个级别的参数
+                            但是注意不一定值越大就越粗 200 不一定比100粗
+
+                        
+                font-style 斜体
+                    可选值
+                        normal 正常的
+                        itakic 斜体
+
+                font-family 字体族 
+                    - 可以用来指定的要使用的字体
+                    - 可选值
+                        serif 衬线字体
+                        sans-serif 非衬线字体
+                        monospace 等宽字体
+                    
+
+                font
+                    - 字体简写属性 可以设置所有的字体相关的样式
+                    - 顺序要求
+                        字体大小必须是倒数第二
+                        字体族必须是最后一个
+
+            */
+
+            /* font-size: 40px; */
+            /* font-weight: normal; */
+            /* font-style: italic; */
+            /* font-family: monospace; */
+            font: italic bold 50px 宋体,微软雅黑,sans-serif;
+            /* font:50px 宋体,微软雅黑,sans-serif;
+                前面两个可以没有后面必须有顺序写
+            */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        Hellow Hellow How are you!
+        今天天气真不错
+    </div>
+</body>
+</html>

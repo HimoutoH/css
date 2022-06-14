@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直对齐</title>
+    <style>
+        table{
+            /* 合并边框 */
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px black solid;
+            width: 300px;
+            height: 300px;
+            /* 文字水平居中 */
+            text-align: center;
+            vertical-align: top;
+        }
+
+            /* 表格的边框需要设置给td */
+            /* 
+                vertical-align可以设置单元格中的对齐方式
+            */
+            .box1{
+                width: 500px;
+                height: 500px;
+                border: 10px solid red;
+                position: relative;
+            }
+            .box2{
+
+                /* 
+                    使用定位设置居中时 要求元素必须有明确的高度和宽度
+                */
+                width: 100px;
+                height: 100px;
+                background-color: greenyellow;
+                /* 水平居中 */
+                margin: 0 auto;
+
+                /* 绝对定位居中  */
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+
+            /* 
+                我们可以将元素的类型设置为table-cell
+                    然后再使用vertical-align来设置垂直居中
+                    它的优点无需固定子元素的大小
+                    它的缺点父元素的自动宽度将会丢失
+            */
+            .box3{
+
+                /* 由于box3变成了td 此时它的默认宽度时被内容撑开 */
+                width: 400px;
+                height: 400px;
+                border: 10px red solid;
+                text-align: center;
+
+                /* 将box3转换为td */
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .box4{
+                display: inline-block;
+                /* margin: 0 auto; */
+                /* width: 200px;
+                height: 200px; */
+                background-color: greenyellow;
+            }
+    </style>
+</head>
+<body>
+    <div class="box3">
+        <div class="box4">aa个分会场更好地发挥地方</div>
+    </div>
+    <!-- <div class="box1">
+        <div class="box2">aa</div>
+    </div> -->
+    <!-- <table>
+        <tr>
+            <td>一</td>
+            <td>二</td>
+            <td>三</td>
+        </tr>
+        <tr>
+            <td>一</td>
+            <td>二</td>
+            <td>三</td>
+        </tr>
+    </table> -->
+</body>
+</html>

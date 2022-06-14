@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页的布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0%;
+        }
+
+        /* 清除li的默认样式 */
+        ul {
+            list-style: none;
+        }
+
+        /* 设置头部的样式 */
+        header {
+            width: 1000px;
+            height: 150px;
+            background-color: skyblue;
+            margin: 20px auto;
+            /* border: 10px; */
+        }
+
+        /* 设置主体内容的样式 */
+        main {
+            width: 1000px;
+            height: 500px;
+            /* background-color: orange; */
+            margin: 20px auto;
+
+        }
+
+        /* 设置菜单样式 */
+        main .meun {
+            width: 150px;
+            height: 100%;
+            background-color: yellow;
+            float: left;
+        }
+
+        /* 轮播图大小 */
+        main .banner {
+            width: 450px;
+            height: 100%;
+            background-color: yellowgreen;
+            float: left;
+            /* 设置左右外边距 */
+            margin: 0 10px;
+        }
+
+        /* 设置图片列表 */
+        main .imgList {
+            width: 200px;
+            height: 100%;
+            background-color: tomato;
+            float: left;
+        }
+
+        /* 设置工具栏列表 */
+        main .tools {
+            width: 170px;
+            height: 100%;
+            float: left;
+            background-color: aqua;
+            /* 设置左外边距 */
+            margin-left: 10px;
+        }
+
+        /* 图片列表里面的图片 */
+        .imgList .i,
+        .ii,
+        .iii {
+            width: 100%;
+            height: 160px;
+            background-color: green;
+            margin: 7px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 创建网页的头部 -->
+    <header>
+
+    </header>
+    <!-- 创建网页的主体 -->
+    <main>
+        <!-- 创建四列 -->
+        <div class="meun"></div>
+
+        <!-- 轮播图 -->
+        <div class="banner"></div>
+
+        <!-- 图片列表 -->
+        <div class="imgList">
+            <div class="i"></div>
+            <div class="ii"></div>
+            <div class="iii"></div>
+        </div>
+
+        <!-- 右侧工具栏 -->
+        <div class="tools"></div>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边框</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+
+            /* 边框 */
+
+            /* 
+                border-width用来设置边框宽度
+                    - 如果指定四个值 则四个值分别是上 右 下 左
+                    - 如果指定三个值 则三个值分别是上 右左 下
+                    - 如果指定两个值 则两个值分别是上下 右左
+                    - 如果指定一个值 则同时指定上下左右
+                除了有border-width外
+                    还有四个 border-xxx-width 用来分别指定四个边框宽度
+                        xxx可以是 
+                        top     上
+                        right   右
+                        bottom  下
+                        left    左 
+            
+            */
+            /* border-color边框颜色
+                    规则和上面边框一样交接的地方是斜的
+            */
+
+            /* border-style边框的样式
+                    可选值：
+                        - none 没有
+                        - solid 实线
+                        - double 双线
+                        - dotted 点状虚线
+                        - dashed 线状虚线
+                    设置样式规则和上面一样
+            */
+
+            /* 
+                    border 
+                        简写属性 可以同时设置样式 颜色 边框
+                        border-top 
+                        border-bottom
+                        border-left
+                        border-right
+                */
+
+
+            border-width: 10px;
+            border-color: red;
+            /* solid 实线 */
+            border-style: solid;
+
+            border: red 10px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

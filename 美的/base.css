@@ -1,0 +1,30 @@
+/* 公共样式表 */
+body{
+    background-color: #fff;
+    color: #666;
+    font: 12px/1.5 'Lucida Grande', Arial, '\5FAE\8F6F\96C5\9ED1', '\5b8b\4f53',sans-serif;
+}
+
+/* clearfix */
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/* 统一超链接样式 */
+a{
+    /* 去除默认的下划线 */
+    text-decoration: none;
+    /* 修改超链接文字的颜色  inherif 表示直接继承父元素的样式 */
+    color: inherit;
+}
+
+/* 指定宽居中 */
+.w{
+    width: 1200px;
+    margin: 0 auto;
+}
+img{
+    vertical-align: top;
+}

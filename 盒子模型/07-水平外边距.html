@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水平外边距</title>
+    <style>
+        .box1 {
+            width: 600px;
+            height: 400px;
+            border: solid red 10px;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            /* margin-left: 100px; */
+            /* margin-left: auto; */
+            /* margin-right: auto; */
+            /* margin: 0 auto; */
+            /* margin-right: 1000px; */
+            /*  
+                外边距不会影响可见框大小    
+                    但是他会影响盒子实际大小
+
+                box2是box1的子元素 所以box2位于box1的内容区
+
+                子元素实际宽度 = 父元素内容器宽度
+                可见框的宽度 + 左右外边距 = 600px
+                200  +  左右外边距  = 600
+                200 + 0 + 0 = 600
+
+                当等式不成立的时候  浏览器会自动调整相应值也使得条件满足
+                    如果width  margin-left  margin-right 都有值时
+                        它会自动调整margin-right的值以使值相等
+                        200 + 0 + 400 = 600
+                        如果wigth maring-left 和margin-right中有auto的值会自动调整以其等式满足
+                        200 + auto + 0 = 600
+                    就变成      200 + 400 + 0 = 600
+
+                        如果 width是auto 左或右外边距也为auto则为auto设置自动设置为0
+                        如果wadth有值 左右外边距是auto
+                            则会浏览器自动将左右外边距设置为相同的以子元素在父元素居中
+                            通常使用这种手段让一个元素在其父元素居中
+                            margin 0 auto
+                        如果width 左右margin都收auto 则左右margin 都设置为0
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>

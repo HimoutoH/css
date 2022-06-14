@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>其他属性</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            overflow: auto;
+        }
+
+        /* 
+            子元素位于父元素的内容区中
+                如果子元素的大小超过父元素，会导致子元素从父元素中溢出
+                可以通过overflow样式来设置父元素如何处理子元素溢出的问题
+
+                可选值：
+                    1. visible 默认值 不对溢出的内容做任何处理 直接在父元素外边
+                    2. hidden 裁剪溢出内容不予显示
+                    3. scroll 生成垂直和水平双向滚动条
+                    4. auto 根据需要生成滚动条
+
+        */
+        .box2 {
+            width: 100px;
+            height: 400px;
+            background-color: orange;
+            margin: auto;
+        }
+
+        a {
+            /* 
+                display
+                    - 可以用来设置元素的类型
+                    - 可选值
+                        1. inline 元素显示为行内元素
+                        2. block 元素显示为块元素
+                        3. inline-block 元素显示为行内块元素
+                            - 行内块 
+                                既不会独占一行 还可以设置宽高
+                        4. table 元素具有table标签特点
+                        5. flow-root 元素具有html根元素特点
+                        6. none 元素在页面中不显示 
+
+                    visibility
+                        - 可以用来设置元素可见性
+                            可选值
+                                1. visible  默认  元素在页面可见
+                                2. hidden 元素在页面中隐藏 但是依然占据页面位置
+            */
+            display: block;
+            visibility: hidden;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+
+        div:hover a {
+            /* display: block; */
+        }
+    </style>
+</head>
+
+<body>
+    <div>我是一个div
+        <a href="#">我是一个超链接</a>
+
+    </div>
+
+    <div class="box1">
+        <!-- <div class="box2"></div> -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sapiente numquam perferendis repellat,
+        consequuntur excepturi, ullam voluptatibus non cumque tenetur assumenda odit! Fugiat voluptates modi magnam
+        consequuntur ipsam, alias laborum.
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>包含块</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+        html{
+            border: 2px blue solid;
+            position: relative;
+        }
+        body{
+            border: 2px red solid;
+            margin:20px;
+        
+        }
+        .box2{
+            /* 
+                当设置百分比单位时
+                    元素的值是参照于‘包含块’的指定值进行计算的
+                包含块
+                    - 包含块就是包含当前元素的块元素
+                    - 根据不同的情况元素的包含块不同
+                        1. 在文档流中元素的包含块就是离他最近的祖先块元素
+                            以下边的网页
+                                box2的包含块是 box1
+                                box1的包含块是 body
+                                body的包含块是 html
+                                html的包含块是 初始包含块 
+
+                        2. 对于设置了绝对定位的元素(position为absolute)
+                            它的包含块就是离他最近的开启定位的祖先元素
+                            如果所有的祖先元素都没开启定位则它的包含块就是初始包含块
+
+                        绝对定位元素是参照于包含块定位的
+            */
+            width: 50%;
+            height: 50%;
+            background-color: orange;
+        }
+
+
+        .box3{
+            width: 500px;
+            height: 500px;
+            background-color: yellowgreen;
+            /* position: relative; */
+        }
+        .box4{
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            /* position: relative; */
+            /* position: absolute; */
+        }
+        .box5{
+            width: 50%;
+            height: 50%;
+            background-color: tomato;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box1">
+        <div class="box2"></div>
+        <span>我是span
+            <span>我是span的span</span>
+        </span>
+    </div> -->
+
+    <div class="box3">
+        <div class="box4">
+            <div class="box5"></div>
+        </div>
+    </div>
+
+</body>
+</html>

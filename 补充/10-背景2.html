@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景</title>
+    <style>
+        .box1{
+            width: 600px;
+            height: 800px;
+            border: 10px red double;
+            padding: 40px;
+            background-color: #bfa;
+            background-image: url(./img/1.jpg);
+            background-size: 200px;
+            background-repeat: no-repeat;
+            background-position:100px 50px ;
+            background-origin: padding-box;
+
+            /*
+                background-size
+                    用来设置背景图片的尺寸
+                        - 参数
+                            图片的宽度 图片的高度
+                        如果只写宽度 高度会等比缩放
+                        如果第一个写auto 第二个值指定高度
+                            宽度会等比例缩放
+                        cover 以使图片将元素撑满 此时图片有可能不会完全显示
+                        contain 使图片完整显示 此时图片可能不会将元素完全撑满 center
+                    background-position 设置背景图片的位置
+                        可选值
+                            top right left bottom
+                            直接设置偏移量
+                                第一个是水平偏移量
+                                    值越大背景图片越向右移动
+                                第二个是垂直偏移量
+                                    值越大背景图片越向下移动
+                    background-origin 
+                        用来指定图片的定位位置
+                            padding-box 默认值 背景图片参照于内边距进行定位
+                            content-box 背景图片参照于内容区进行定位
+                            border-box 背景图片参照于边框进行定位
+            
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

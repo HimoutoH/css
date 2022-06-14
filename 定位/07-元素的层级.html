@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的层级</title>
+    <style>
+
+        /* 
+            定位会提升元素的层级 定位元素会盖住文档流的元素
+                定位元素之间的层级是一样的 但是下面的定位元素会盖住上面的元素
+            可以通过z-index来改变定位元素层级
+            z-index需要一个整数 值越大 元素的层级越高
+                元素的层级越高越优先显示 元素层级一样优先显示下边的
+
+        */
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            position: absolute;
+            z-index: 1;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            z-index: 2;
+            opacity: .5;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            z-index: 3;
+            /* 
+                opacity: ;   可以设置元素的透明度 
+                opacity用来设置整个元素透明度
+                rgba 只能设置某颜色透明度
+            */
+            opacity: .5;
+
+        }
+        .box4{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            position: relative;
+            top: 300px;
+            /* 
+                父元素的层级在高也没办法盖住子元素
+            */
+            z-index: 999;
+        }
+        .box5{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">
+        <div class="box5"></div>
+    </div>
+</body>
+</html>

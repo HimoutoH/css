@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内边距</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            border: 10px orange solid;
+
+            /* 
+                内边距
+                    - 内容区和边框之间的距离称为内边距
+                    - 默认情况下内边距也会影响盒子可见框大小
+                    - 一共有四个方向内边距
+                        padding-top 上内边距
+                        padding-right 右内边距
+                        padding-bottom 下内边距
+                        padding-left 左内边距
+                        - 元素的可见框大小 由内容区 内边距 和边框共同决定
+
+                    简写属性
+                        - padding 可以分别指定四个方向的内边距 规则和border-width
+            */
+            padding-top: 100px;
+            padding-right: 100px;
+            padding-bottom: 100px;
+            padding-left: 100px;
+        }
+
+        .box2 {
+            width: 100%;
+            height: 100%;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>

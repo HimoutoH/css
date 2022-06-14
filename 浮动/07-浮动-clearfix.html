@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动-clearfix</title>
+    <style>
+        .box1{
+            border: 10px red solid;
+            background-color: yellow;
+            /* 不想外边距传递可以用 */
+            /* overflow: hidden; */
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            float: left;
+            margin-top: 100px;
+        }
+            /* 使用伪元素解决高度塌陷 */
+        /* .box1::after{
+            content: "";
+            变成块元素
+            display: block;
+            clear: both;
+        } */
+
+
+
+        /* 解决外边距的折叠 子元素传递给父元素 */
+        /* .box1::before{
+            content: "";
+            display: table;
+        } */
+
+        .clearfix::before,
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1 clearfix">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图标字体</title>
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <style>
+        ul{
+            list-style: none;
+        }
+
+        i{
+            font-size: 60px;
+            color: red;
+            
+        }
+        /* 也可以通过 before::after伪元素来使用图标字体 */
+        li::before{
+            content: "\f017";
+            padding-right: 10px;
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <i class="far fa-angry"></i>
+
+    <!-- 
+        除了通过类来使用图标字体 还可以通过编码来使用
+        &#实体编码
+    -->
+    <ul>
+        <li>孙悟空</li>
+        <li>猪八戒</li>
+        <li>沙和尚</li>
+    </ul>
+</body>
+</html>

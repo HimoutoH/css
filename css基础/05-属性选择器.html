@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style>
+        /* 
+            属性选择器
+                - 作用可以根据元素的属性选中
+                [属性名]
+                    - 选中具有某个属性的元素
+                [属性名=属性值]
+                    - 选中属性值为指定值的元素
+                [属性名*=属性值]
+                    - 选中属性值中含有指定内容的元素
+                [属性名^=属性值]
+                    - 选中属性值开头有指定内容的元素
+                [属性名$=属性值] 
+                    - 选中属性值结尾有指定内容的元素
+        */ 
+        /* div[title] {
+            font-size: 30px;
+        } */
+
+        /* a[href="https://www.baidu.com"]{
+            font-size: 40px;
+        } */
+
+        /* a[href*="baidu"]{
+            font-size: 40px;
+        } */
+        /* [title*="a"]{
+            color: red; */
+        /* } */
+        /* [title^='a'] {
+            color: red;
+        } */
+        [title$="c"] {
+            color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- tatle 当鼠标移动到该段落就显示abc -->
+    <div title="abc" class="tit">我是一个div</div>
+    <div>我是一个div</div>
+    <div class="tit">我是一个div</div>
+    <a href="https://www.baidu.com">去百度</a>
+    <a href="https://jd.com">去京东</a>
+    <p>我是一个段落</p>
+</body>
+
+</html>

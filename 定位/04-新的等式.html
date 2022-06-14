@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>包含块-新的等式</title>
+    <style>
+        /* .box1{
+            width: 400px;
+            height: 400px;
+            background-color: #bfa;
+            相对定位
+            position: relative;
+        } */
+        .box2{
+            width: 600px;
+            height: 600px;
+            background-color: #bfa;
+            position: relative;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* 相对定位 */
+            position: absolute;
+            /* 水平居中因为等式默认是auto 所以必须改成0 */
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            /* margin-left: auto;
+            margin-right: auto; */
+            margin: auto;
+
+
+
+            /* 
+                在文档流中
+                    子元素的实际宽度 = 父元素内容区的宽度
+                    margin-left + width + margin-right = 父元素内容区的宽度
+                当元素开启绝对定位后
+                    left + margin-left + width + margin-right + right = 父元素的宽度
+                    auto + 0 + 100px + 0 + auto = 600px
+                        - 这种情况下浏览器会自动设置left和right 的值以是的绝对定位元素的位置不发生变化
+                    0 + 0 + auto + 0 + 0 = 600px
+                        - 如果偏移量个外边距都由值而width是auto则浏览器会自动调整width的值
+                            以使等式成立
+                    0 + auto + 100 + auto + 0 = 600px
+
+                当元素开启绝对定位后，垂直方向也出现了新的等式
+                    top + margin-top + height + margin-bottom + bottom = 父元素的高度、
+                    0 + 0 + auto + 0 + 0 = 父元素的高度 
+
+
+            总结
+                绝对定位元素在包含块中水平居中
+                    - 需要设置如下属性
+                    width 固定值
+                    left 0
+                    right 0
+                    margin-left auto
+                    margin-right auto   (margin： 0 auto)
+                绝对定位垂直居中
+                    - 需要设置如下属性
+                    height 固定值
+                    top 0
+                    bottom 0
+                    margin-top auto
+                    margin-bottom auto   (margin： auto 0)
+                双方向居中
+                    width 固定值
+                    left 0
+                    right 0
+                    margin-left auto
+                    margin-right auto
+                    height 固定值
+                    top 0
+                    bottom 0
+                    margin-top auto
+                    margin-bottom auto
+
+                    简写(margin: auto)
+            绝对定位元素将包含块充满
+                - 需要设置如下属性
+                    height auto
+                    width auto
+                    left 0
+                    right 0
+                    top 0 
+                    bottom 0
+
+            */
+            /* margin: 0 auto; */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">
+            <div class="box3"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

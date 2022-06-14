@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字垂直对齐</title>
+    <style>
+        p{
+            border: 1px black solid;
+            font-size: 40px;
+
+            /* 
+                文字在网页中显示时每一个文字都会有一个文本框
+                    这个文本框存在 只是无法看到
+                    当我们使用font-size在指定字体大小时 指定的就是这个框的高度
+
+                每一个文本框中都有一条基线(baseline) 文字默认都是基线上对齐的
+                可以通过vertical-align 来指定文字的对齐方式
+                    可选值
+                        - baseline 默认值 基线对齐
+                            - 每一个文字文本框都是基线是在一条线上的
+                        - top 顶部对齐
+                            - 每一个文字的文本框的顶部是在一条线上
+                        - bottom 底部对齐
+                            - 每一行文字的文本框都是底部在一条线上
+                        - middle 居中对齐
+                    - 也可以通过写像素指定文字的对齐
+
+
+            所有的行内元素 替换元素 (图片 表单项)
+                默认都沿着基线对齐的  不想有图片基线对齐 除了写默认的写上对齐 底部对齐 middle 都可以只要不是baseline就可以 
+            */
+            vertical-align: top;
+        }
+        span{
+            font-size: 20px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <p>Hellow Hellow <span>Hew</span> are you! 今天<span>天气</span>真不错！</p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简写属性</title>
+    <style>
+        .box1{
+            width: 300px;
+            height: 500px;
+            /* background-color: #bfa;
+            background-image: url(./img/1.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; */
+            
+
+            /* 
+                background  
+                    - 背景的简写属性可以同时设置所有背景相关的样式
+                    - 背景的大部分样式在简写属性时没有设置顺序要求
+                        需要特别注意的属性
+                            background-size必须写在position的后边并且使用/区分
+                            background-origin和clip 他们的顺序origin 后 clip
+            */
+            background: #bfa url(./img/1.jpg) 100px 50px/100px no-repeat;
+            /* background-clip: ;
+            background-origin: ; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

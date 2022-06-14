@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外边距折叠</title>
+    <style>
+
+        /* 
+            外边距折叠
+                - 相邻的垂直外边距会发生外边距重叠
+                    1. 兄弟元素
+                        兄弟元素间相邻的垂直外边距会取最大值
+                    2. 父子元素(是个问题)
+                        父子元素之间相邻的垂直外边距子元素会传递给父元素
+
+        */
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            margin-bottom: 100px;
+            border: 1px red solid;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            margin-top: 100px;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* margin-top: 100px;   因为上面的100下外边距和这个上外边距重叠了 变成100px 不是200px */
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box3"></div>
+    </div>
+    <div class="box2"></div>
+</body>
+</html>

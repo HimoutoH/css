@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行内元素盒模型</title>
+    <style>
+        /* 
+            行内元素不能设置宽度和高度 行内元素内容区大小由内容的多少决定
+
+            行内元素可以设置内边距 但是垂直方向内边距不会影响布局
+            行内元素可以设置边框 但是垂直方向边框不会影响布局
+            行内元素可以设置外边距 但是垂直外边距不会影响布局
+
+            行内元素 不能设置宽度和高度 
+                可以设置内边距 边距 外边距
+                但是垂直方向内边距 边距和外边距不会影响页面的布局
+            
+        */
+
+        span {
+            background-color: yellow;
+            /* width: 200px;
+            height: 200px; */
+            /* padding: 100px; */
+            /* border: 10px red solid; */
+            margin: 20px;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+
+        /* 
+            替换元素除了不会独占一行 其他特点和块元素几乎一样的
+        */
+        input {
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            margin: 30px;
+            /* border: 30px; */
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+
+    <!-- <span>我是一个span</span>
+    <span>我是一个span</span>
+    <span>我是一个span</span> -->
+    <div class="box1"></div>
+</body>
+
+</html>

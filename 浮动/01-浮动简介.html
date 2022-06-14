@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动简介</title>
+    <style>
+        .box1{
+            width: 400px;
+            height: 200px;
+            background-color: #bfa;
+            float: left; 
+            /* margin: 0 auto; */
+        }
+        /* 
+            使用float来设置元素的浮动
+                可选值
+                    . none 默认值 元素不浮动
+                    . left 向左浮动
+                    . eight 向右浮动
+
+            
+            浮动的特点 
+                - 设置浮动后元素会向左或者右平移
+                - 设置浮动后元素会从文档流中脱离
+                    ① 脱离文档流的元素会盖住文档流中的元素
+                        可以为多个元素设置浮动使其水平排序
+                    ② 脱离文档流后块元素不在独占一行
+                        原因:子元素的实际宽度不在强制等于父元素内容区的宽度
+                        注意浮动元素无法通过 maring: 0 auto;设置水平居中
+                    ③ 脱离文档流块元素的默认宽高都被内容撑开
+                    ④ 脱离文档流行内元素的特点和块元素一样
+                - 浮动元素不会盖住文字 文字会环绕在浮动元素的周围
+                    可以利用浮动制作文字环绕图片的效果
+
+            注意：
+                - 如果一行以内不能容纳所有的浮动元素 浮动元素会自动换到下一行
+                - 浮动元素不会超过他上面的浮动元素最多齐平
+                    除非修改结构  
+        */
+        .box2{
+            /* margin: 0 auto; */
+            width: 400px;
+            height: 200px;
+            background-color: orange;
+            /* float: right; */ 
+            float: left;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            float: right;
+        }
+
+        span{
+            width: 100px;
+            height: 100px;
+            background-color: #ff0;
+            float: left;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* float: left; */
+        }
+        p{
+            height: 100px;
+            background-color: #bfa;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <!-- <span>我是一个span</span> -->
+    <!-- <div class="box3"></div> -->
+    <!-- <p>hellow</p> -->
+
+    <div class="box4"></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font-face</title>
+    <style>
+
+        /* 
+            我们通过font-family 指定字体时，字体可用的前提是用户计算机中装有这个字体
+                如果我们想使用一些用户计算机没有安装的特殊字体可以通过font-face来指定字体
+
+            像我们这个下边这个字体的用法 一般情况不推荐使用
+                首先 我们通过服务器为用户提供字体 需要用户先下载字体 然后才能使用字体
+                    下载需要花费时间 会影响用户体验
+                首先 字体通常都会有版权问题 如果使用了一些未经授权的字体 会存在法律的风险
+        */
+        @font-face {
+            font-family: test ;
+            src: url(./...字体文件);
+        }
+        .box1{
+            font-size: 40px;
+            font-family: 宋体;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        Hellow Hellow How are you! 今天天气真不错！
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粘滞定位</title>
+    <style>
+        body{
+            height: 3000px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            /* 
+            粘滞定位
+                - 将元素position元素设置为sticky即开启了粘滞定位
+                - 粘滞定位的特点和相对定位类似
+                    - 粘滞定位的元素是参照于离他最近的开启了滚动条的祖先元素进行定位
+                    - 当粘滞定位元素滚动到定位位置时 元素会保持在该位置不在滚动
+            */
+            position: sticky;
+            top: 0;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

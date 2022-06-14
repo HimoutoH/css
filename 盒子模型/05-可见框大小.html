@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可见框大小</title>
+    <style>
+        .box1 {
+            /* 
+                box-sizing 
+                    - 用来指定盒子模型的计算方式
+                    - 默认值 content-box   width height  用来设置内容区大小
+                    - 可选值 border-box 
+                        设置该值以后 width height 将被用来设置可见框大小
+                        设置border 将无法设置内容区的大小
+                            内容区的大小会根据边框和内边距自动调整
+            */
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            border: 10px orange solid;
+            padding: 10px;
+        }
+
+        .box3 {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box3"></div>
+    </div>
+</body>
+
+</html>

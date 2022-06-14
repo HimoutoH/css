@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景练习</title>
+    <style>
+        /* 
+            下边的练习中使用了三个背景图片表示一个按钮的不同状态
+                浏览器加载图片是按需加载 一个图片在他使用的时候才会对齐进行加载
+            下边的例子中 网页刚刚加载时 只有link.png被使用了
+                所以一开始浏览器指回加载link.png
+            当触发了hover伪类时 hover.png才会加载
+            同理active.png在触发active伪类时才会加载’
+
+            加载图片需要花费一定时间 当按钮在两个状态切换时
+                而图片有没加载完毕 按钮会出现一个闪烁的情况
+        */
+        .btn {
+            width: 93px;
+            height: 29px;
+            /* background: url(./btn/link.png); */
+            background: url(./btn/btn.png);
+        }
+
+        .btn:hover {
+            /* background: url(./btn/hover.png); */
+            background: url(./btn/btn.png);
+            background-position: -93px 0;
+        }
+
+        .btn:active{
+            /* background: url(./btn/active.png); */
+            background: url(./btn/btn.png);
+            background-position: -186px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn"></div>
+</body>
+
+</html>

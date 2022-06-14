@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角和轮廓</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            border: 10px solid orange;
+
+            /*
+                border-radius
+                    该属性用来设置圆角
+                        指定的是圆角的半径 半径越大 角的弧度越大
+                        当值是可见框大小的一半时
+                            且可见框是一个正方形我们得到的就是一个圆形   可以用50%
+
+
+            
+            */
+            /* border-radius: 10px; */
+
+            /* 
+                30 左上  60右上  80右下  100左下 顺时针
+                三个值 30左上   右上60   右下80   左下60  对角相等
+                两个值  30 左上右下    60右上左下  对角相等、
+                一个值 四个都一样
+            */
+            /* border-radius: 30px 60px ; */
+            /* border-radius: 40px 50px 60px 70px / 80px 90px 100px 70px; */
+            /* border-radius: 80px / 40px; */
+            /*
+            border-top-left-radius: ;
+                左上角
+            border-bottom-right-radius: ;
+                右上角
+            border-top-right-radius: ;
+                右下角
+            border-bottom-left-radius: ; 
+                左下角
+            */
+            border-top-left-radius: 100px;
+
+
+            /* 
+            border-top-left-radius: 100px;
+                半径为100的圆角
+            border-top-left-radius: 100px 50px;
+                上边半径为100 左侧半径为50 
+            
+            */
+            /* 
+                可以分别指定圆角的横向半径和纵向半径
+                    用 / 隔开
+            */
+
+        }
+
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            margin-bottom: 100px;
+            /* border: 10px solid red; */
+            /* outline: 10px solid tomato; */
+
+            /* 
+                outline 用来设置元素的轮廓
+                    设置方式和border 
+                    不同点 边框是可见的一部分会影响布局
+                    轮廓不属于可见框就是元素的描边 
+                        轮廓不会影响到页面的布局
+            */
+        }
+
+        .box2:hover {
+            border: 10px solid tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box2"></div>
+
+    <div class="box1"></div><br><br>
+
+
+
+</body>
+
+</html>

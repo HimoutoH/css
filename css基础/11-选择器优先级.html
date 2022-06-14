@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器优先级</title>
+    <style>
+        div{
+            color: red;
+        }
+        #box1{
+            color: blue;
+        }
+        .box2{
+            color: green;
+        }
+
+        /* 
+            选择器的优先级
+                - 当使用不同的选择器选中相同的元素，并且为相同的样式设置不同值时
+                    就会发生样式冲突
+                - 发生样式冲突时 那个样式生效由选择器优先级决定
+                - 选择器的优先级
+                    id选择器        100
+                    类和伪类        10
+                    元素选择器      1
+        */
+
+    </style>
+</head>
+<body>
+    <div id="box1" class="box2">我是一个div</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+    <style>
+        /* 
+            伪元素用来表示网页中的特殊位置
+                - 伪元素使用::开头
+
+            ::first-letter
+                - 表示首字符
+            ::first-line
+                - 表示第一行
+            ::selection
+                - 表示选中的内容
+            ::before
+                - 表示标签开始的位置
+            ::after
+                - 表示标签结尾的位置
+            
+        */
+
+        /* p::first-letter{
+            font-size: 40px;
+            color: red;
+        } */
+
+        /* p::first-line{
+            font-size: 40px;
+            color: red;
+        } */
+        /* p::selection{
+            background-color: yellowgreen;
+        } */
+
+        div::before{
+            /* color: red; */
+            /* content用来向before中添加内容 */
+            content: "哈哈";
+            color: red;
+        }
+
+        div::after{
+            content: "你好";
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia doloremque maiores culpa cumque? Non illum
+        voluptatum, praesentium, ea dolor totam excepturi repudiandae incidunt sit facilis nisi quam, nobis sapiente
+        omnis.
+    </p> -->
+
+    <div>我是一个div</div>
+</body>
+
+</html>

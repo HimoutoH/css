@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS常用选择器</title>
+    <style>
+        /* 选择器
+            - 选择器用来选中页面的元素，从而为其设置样式
+         */
+
+        /* 
+            元素选择器
+                - 作用: 可以根据标签名选中一组元素
+                - 语法: 标签名
+                例子：
+                    - div{}  p{}  h1{}  span{}
+          */
+
+        /* p{
+            color: red;
+        } */
+
+        /* 
+            id选择器
+                - 作用：根据元素的id属性选中一个元素
+                - 语法：#id属性值
+                - 例子
+        */
+        /* #p1 {
+            background-color: yellow;
+        }
+
+        #p2 {
+            background-color: yellow;
+        }
+
+        #p3 {
+            background-color: yellow;
+        } */
+        /* #p1,#p2,#p3,h1{
+                background-color: green;
+                color: aliceblue;
+            } */
+        /* 
+            选择器分组
+                - 作用：可以同时为多个选择器对应的元素生效
+                - 语法：选择器1,选择器2,选择器n{}
+        */
+
+
+        /* #p1,#p2,#p3{
+            background-color: orange;
+        } */
+
+        /* 
+            类选择器
+                - 作用: 根据元素的class属性选中一组元素
+                - 语法：.class属性值{}
+        */
+        /* .p4 {
+            background-color: orange;
+        } */
+        /* .p5{
+            color: white;
+        } */
+
+        /* 
+            如果将元素和class连着写，则要求元素必须满足所有的选择器才会被选中
+        */
+        /* div.p5.p4{
+            font-size: 40px;
+        } */
+
+
+        /* 
+            * 通配选择器
+                - 作用：用来选中页面所有元素
+                - 语法：*{}
+        */
+        *{
+            color: blue;
+        }
+
+
+        /* 
+            id选择器
+            类选择器
+            分组选择器
+            通配选择器
+
+        */
+    </style>
+</head>
+
+<body>
+
+    <h1>我是一级标题</h1>
+    <p>我是一个段落我是一个段落我是一个段落</p>
+
+    <!--
+        标签中可以添加一个class属性 用来为标签分组
+            class属性和id类似 不同点在于class属性可以重复
+            并且一个元素可以有多个class  类选择器
+            div.p5{} 就是是div标签 同时是classp5的标签同时满足这两个条件 满足多个条件
+    -->
+    <p id="p1" class="p4 p5">我是一个段落我是一个段落我是一个段落</p>
+    <p id="p2" class="p4">我是一个段落我是一个段落我是一个段落</p>
+    <p id="p3" class="p4">我是一个段落我是一个段落我是一个段落</p>
+    <p>我是一个段落我是一个段落我是一个段落</p>
+    <p>我是一个段落我是一个段落我是一个段落</p>
+    <div class="p4 p5">我是一个div</div>
+    <span>我是一个span</span>
+</body>
+
+</html>

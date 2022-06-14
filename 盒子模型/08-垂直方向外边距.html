@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直方向外边距</title>
+    <style>
+        .box1 {
+            width: 600px;
+            /* height: 400px; */
+            border: 10px red solid;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            /* margin-top: auto;
+            margin-bottom: auto; */
+
+            /* margin: 20px auto;   居中 向下20px */
+            /* margin: 20px auto; */
+            /* margin-bottom: 200px; */
+            /* 
+                如果父元素的高度为auto 则子元素的垂直外边距可以把父元素撑开
+            */
+
+            /* 
+                如果width 设置为auto 浏览器会使元素的宽度尽可能的大
+                如果height设置为auto 元素的高度会被内容撑开
+
+                margin-top 和margin-bottom 则浏览器会自动设置为0
+
+                width 和 height 的默认值就是auto
+                
+            
+            */
+        }
+
+        /* .box3{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 0 auto
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2">
+
+        </div>
+        <!-- <div class="box3"></div> -->
+    </div>
+</body>
+
+</html>

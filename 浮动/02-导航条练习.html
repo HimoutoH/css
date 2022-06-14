@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航栏</title>
+    <style>
+        /* 清除默认样式 */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 清除小圆点 */
+        ul {
+            list-style: none;
+        }
+
+        /* 设置外部容器的样式 */
+        .menu {
+            width: 1200px;
+            height: 46px;
+            background-color: #ffc;
+            /* 设置居中 */
+            margin: 0 auto;
+        }
+
+        /* 设置菜单项li的样式 */
+        .menu li {
+            float: left;
+            /* 设置背景颜色 */
+            /* background-color: orange; */
+
+            /* 设置li的高度和宽度 */
+            /* width: 200px;
+            height: 46px; */
+            /* 为什么不用设置高度宽度 因为脱离文档流了大小会被内容撑开
+                    所以不用设置
+            */
+
+            /* 设置文字水平居中 */
+            text-align: center;
+            /* 设置文字垂直居中 */
+            line-height: 46px;
+        }
+
+        /* 设置文字的样式 */
+        .menu a {
+
+            /* 转换为块元素 */
+            display: block;
+            width: 200px;
+            height: 46px;
+            /* 去除下划线 */
+            text-decoration: none;
+            /* 设置字体颜色 */
+            color: black;
+            /* 设置字体大小 */
+            font-size: 20px;
+            /* background-color: red; */
+        }
+
+        .menu a:hover {
+            color: aqua;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">新闻</a></li>
+        <li><a href="#">体育</a></li>
+        <li><a href="#">娱乐</a></li>
+        <li><a href="#">关于</a></li>
+        <li><a href="#">联系</a></li>
+        <!-- <li><a href="#"></a></li> -->
+    </ul>
+</body>
+
+</html>

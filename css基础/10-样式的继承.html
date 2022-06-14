@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>样式的继承</title>
+    <style>
+
+        /*
+            样式的继承 
+                - 当我们为一个元素设置样式时 其后代元素也会设置上相同的设置
+                - 继承的存在是简化了css代码的编写
+                - 但是并不是所有的样式都会继承 比如布局相关的 背景相关的都不会继承
+        */
+        p{
+            color: red;
+        }
+        div{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>我是一个段落
+        <span>我是p中的span</span>
+    </p>
+    <div>我是一个div
+        <p>我是地中的p</p>
+    </div>
+</body>
+</html>

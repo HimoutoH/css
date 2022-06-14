@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景</title>
+    <style>
+        .box1 {
+            width: 400px;
+            height: 600px;
+            border: 10px red double;
+            padding: 10px;
+
+            /* 
+                background-color
+                    - 默认情况背景会一直延伸到边框下边
+                background-clip 设置显示背景的区域
+                    border-box 默认值 背景会延伸到边框下
+                    padding-box 背景会延伸到内边距
+                    content-box 背景只会在内容区出现
+                background-image 设置背景图片
+                    如果图片和元素一样大 图片会完整显示将元素撑满
+                    如果图片比元素大 图片默认只会显示一部分
+                    如果图片比元素小 图片默认双方向平铺 以撑满元素
+                background-repeat 设置背景图片重复方式  
+                    可选值
+                        repeat 默认值图片会沿着x y双向重复
+                        no-repeat 图片不会重复
+                        repeat-x x轴撑开
+                        rapeat y y轴撑开
+            */
+            background-color: #bfa;
+            /* background-clip: content-box; */
+            background-image: url(./img/1.jpg);
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+</body>
+
+</html>
